@@ -1,5 +1,6 @@
 import  React , { Component } from "react";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class AxiosApp extends Component {
     state = {
@@ -8,15 +9,6 @@ class AxiosApp extends Component {
     getDataHandler = () => {
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then(res => {
-            // var htmlBody = '';
-            console.log("res axios : ",res);
-            // res.data.forEach(d => {
-            //     htmlBody += d.title + '\n' 
-            // });
-            // this.setState({
-            //     "data":htmlBody
-            // })
-            // document.getElementById('loadRes').html(htmlBody);
             this.setState({
                 posts: res.data
             })            
@@ -29,7 +21,9 @@ class AxiosApp extends Component {
                 return(
                     <div className="post card" key={post.id}>
                         <div className="card-content">
-                            <span className="card-title">{ post.title }</span>
+                            <Link to={'/' + post.id }>
+                                <span className="card-title">{ post.title }</span>
+                            </Link>
                             <p>{ post.body }</p>
                         </div>    
                     </div>
