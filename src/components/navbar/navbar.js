@@ -12,7 +12,7 @@ const Navbar = (props) =>{
                     <li><Link to="/">Home</Link></li>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
-                    <li><NavLink to="/axios">AxiosApp</NavLink></li>
+                    <li><NavLink to="/axios">Redux Data</NavLink></li>
                     <li><NavLink to="/axiosNew">AxiosAppNew</NavLink></li>
                 </ul>
             </div>
