@@ -12,7 +12,7 @@ class AxiosApp extends Component {
           <div className="post card" key={post.id}>
             <img src={img} alt="A Pokeball" />
             <div className="card-content">
-              <Link to={'/' + post.id}>
+              <Link to={'/redux/' + post.id}>
                 <span className="card-title red-text">{post.title}</span>
               </Link>
               <p>{post.body}</p>
